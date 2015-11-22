@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 17, 2015, 10:08:44 PM
+    Author     : Chuck
+*/
+
+html{
+    background-color: #827d7d;
+    
+}
+
+body h1{
+    
+   
+}
+.main{
+    background-color:#fff;
+    border: solid thin #2a3542;
+    width:66%;
+    margin:0% 19% 0%;
+    border-radius: 4%;
+    clear:both;
+    border-radius: 15px 15px;
+    padding: 0 2%;
+}
+
+.main p{
+    text-align:center;
+}
+
+
+
+.shirt1{
+    background-color: #fff;
+    width: 20%;
+    height: auto;
+    margin:0px 2% 2% 16%;
+    float: left;
+}
+
+.shirt2{
+    background-color: #fff;
+    width: 20%;
+    height: auto;
+    margin:0px 2% 2% 2%;
+    float: left;
+}
+
+.shirt3{
+    background-color: #fff;
+    border-radius: 1%;
+    width: 20%;
+    height: auto;
+    margin:0px 16% 2% 2%;
+    float: left;
+}
+
+figure{
+    text-align: center;
+}
+
+figure img{
+    max-height: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
