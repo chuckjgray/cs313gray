@@ -32,7 +32,12 @@ body h1{
     text-align:center;
 }
 
-
+.center{
+    display:block;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
 
 .shirt1{
     background-color: #fff;
@@ -73,3 +78,7 @@ figure img{
     text-align: center;
 }
 
+.right{
+    float:right; 
+    width:200px;
+}   

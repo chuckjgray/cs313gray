@@ -22,6 +22,8 @@
                 <form action="login.jsp">
                     <input type="submit" value="login">
                 </form>
+                
+                <br/><br/>
             </div>
             <h2>${$param.username}</h2>
             <hr align="center" width="70%">
