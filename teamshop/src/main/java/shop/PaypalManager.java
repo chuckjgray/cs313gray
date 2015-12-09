@@ -40,10 +40,10 @@ public class PaypalManager {
 	protected static String REDIRECT_URL = "https://www.sandbox.paypal.com/webscr?cmd=_express-checkout";
 	
 	/** User will return to this page after the sale is successful */
-	protected static String RETURN_URL = "http://localhost:8080/teamshop/confirmation.jsp?";
+	protected static String RETURN_URL = "http://java-cgray.rhcloud.com/teamshop/confirmation.jsp?";
 	
 	/** User will return here if they hit the cancel button during purchase */
-	protected static String CANCEL_URL = "http://localhost:8080/teamshop/buyshirt.jsp?";
+	protected static String CANCEL_URL = "http://java-cgray.rhcloud.com/teamshop/buyshirt.jsp?";
 
 	//protected final static Logger log = Logger.getLogger(PayPalManager.class.getName());
         private static Object ArrayUtils;

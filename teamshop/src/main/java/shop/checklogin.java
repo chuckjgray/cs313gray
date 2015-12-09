@@ -82,8 +82,9 @@ public class checklogin extends HttpServlet {
 
         } else {
             request.getSession().setAttribute("message", "There was an error with your login");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        
 
     }
     
