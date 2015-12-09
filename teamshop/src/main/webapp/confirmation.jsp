@@ -22,6 +22,7 @@
                       <input type="hidden" value="${param.itemId}" name="itemId">
                       <input type="hidden" value="${param.token}" name="token">
                       <input type="hidden" value="${param.PayerID}" name="PayerID">
+                      <input type="hidden" value="${param.price}" name="price">
                       <input type="submit" value="Confirm Payment" style="display:block;position:relative;margin-left:auto;margin-right:auto;"/>
                </form>
            <br/>

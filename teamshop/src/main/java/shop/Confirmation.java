@@ -82,9 +82,10 @@ public class Confirmation extends HttpServlet {
         String sitemId = request.getParameter("itemId"); 
         int userId = Integer.parseInt(suserId);
         int itemId = Integer.parseInt(sitemId); 
+        String price = request.getParameter("price");
         
         String payerid = manager.validateDetails(token, userId, itemId);
-        manager.finishPurchase(token, payerid, userId, itemId, "name", "name", "2");
+        manager.finishPurchase(token, payerid, userId, itemId, "Shirts", "These are some awesome shirts!", price);
         request.getRequestDispatcher("thankyou.jsp").forward(request, response);
     }
 

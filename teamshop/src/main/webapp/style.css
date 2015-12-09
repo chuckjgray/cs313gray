@@ -39,6 +39,10 @@ body h1{
     margin-right:auto;
 }
 
+.form{
+    text-align: center;
+}
+
 .shirt1{
     background-color: #fff;
     width: 20%;

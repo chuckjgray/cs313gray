@@ -71,7 +71,7 @@ public class PaypalManager {
 		String itemPriceDollars, HttpServletResponse resp)
 	{
 		// include the userId and itemId in the return urls so we can access them later
-		String returnUrl = encodeValue(RETURN_URL + "&userId=" + userId + "&itemId=" + itemId);
+		String returnUrl = encodeValue(RETURN_URL + "&userId=" + userId + "&itemId=" + itemId + "&price=" + itemPriceDollars);
 		String cancelUrl = encodeValue(CANCEL_URL + "&userId=" + userId + "&itemId=" + itemId);
 		
 		String data = 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shop;
+package cart;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Chuck
  */
-@WebServlet(name = "checklogin", urlPatterns = {"/checklogin"})
-public class checklogin extends HttpServlet {
+@WebServlet(name = "passData", urlPatterns = {"/passData"})
+public class passData extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,17 +33,13 @@ public class checklogin extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet checklogin</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet checklogin at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            String test = request.getParameter("price");
+            request.getSession().setAttribute("price", test);
+            request.getRequestDispatcher("buyshirt.jsp").forward(request, response);
+        } catch (Exception e) {
+
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -58,8 +54,7 @@ public class checklogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getSession().setAttribute("message", "");
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -73,20 +68,9 @@ public class checklogin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        if (username.equals("test") && password.equals("secret")) {
-
-            request.getRequestDispatcher("session.jsp").forward(request, response);
-
-        } else {
-            request.getSession().setAttribute("message", "There was an error with your login");
-        }
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        processRequest(request, response);
 
     }
-    
 
     /**
      * Returns a short description of the servlet.

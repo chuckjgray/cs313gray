@@ -4,6 +4,8 @@
     Author     : Chuck
 --%>
 
+
+<%@page import="java.util.Random"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,27 +16,32 @@
     </head>
     <body>
         <div class="main">
-            
+
             <h1>Buy Your Shirt Here</h1>
             <form action="homepage.jsp" method="POST">
                 <input type="submit" value="Continue Shopping">
             </form>
-        
+
             <br/>
+            <%
+                Random r = new Random();
+                int rint1 = r.nextInt((2400000) + 1);
+                int rint2 = r.nextInt((2400000) + 1);
+            %>
             <form action="StartPayment" method="POST">
-                User ID (This will be removed when we have login database working properly.):<br/>
-                <input type="text" value = "7" name="userId"><br/><br/>
-                Item ID (To my knowledge, we can just increment this for each payment in the database.):<br/>
-                <input type="text" value = "7" name="itemId"><br/><br/>
-                Item Name (This is a bit tricky... it would be nice to add a list of items and have it do all of the back end, but that may be too much for the time given):<br/>
-                <input type="text" value = "7" name="itemName"><br/><br/>
-                Description: <br/>
-                <input type="text" name="description"><br/><br/>
-                Price: <br/>
-                <input type="text" value = "1" name ="price"><br/><br/>
+                <!--User ID:<br/>-->
+                <input type="hidden" value = "<%= rint1%>" name="userId">
+                <!--Item ID:<br/>-->
+                <input type="hidden" value = "<%= rint2%>" name="itemId">
+                Item Name: Shirts<br/>
+                <input type="hidden" value = "Shirts" name="itemName"><br/><br/>
+                Your Total Price:  ${price}<br/>
+                <input type="hidden" value = "${price}" name ="price"><br/><br/>
+                <input type="hidden" name="description" value ="These are awesome shirts!">
+                <p>Note - You will be directed to the PayPal site for the transaction.</p>
                 <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /><br/><br/>
             </form>
         </div>
     </body>
-    
+
 </html>
