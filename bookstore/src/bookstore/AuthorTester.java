@@ -44,19 +44,37 @@ public class AuthorTester {
             }
         }
 
-        //add to new book database to the first author "1"
+        //add to author to database
         em.getTransaction().begin();
+        
+        Author newAuthor = new Author();
+        newAuthor.setName("Herman Melville");
+
+        em.persist(newAuthor);
 
         Book newBook = new Book();
-        newBook.setTitle("The Mysterious Stranger");
+        newBook.setTitle("Moby Dick");
 
-        Author firstAuthor = em.find(Author.class, 1);
+        Author firstAuthor = em.find(Author.class, 3);
         newBook.setAuthor(firstAuthor);
-
+        
         em.persist(newBook);
 
         em.getTransaction().commit();
+        
+        Query query3 = em.createQuery("SELECT a FROM Author a");
+        List<Author> authors3 = query3.getResultList();
+
+        for (Author author : authors3) {
+            System.out.println("Author: " + author.getName());
+
+            for (Book book : author.getBooks()) {
+                System.out.println("\tBook: " + book.getTitle());
+            }
+        }
 
         em.close();
+        
+        
     }
 }
