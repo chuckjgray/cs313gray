@@ -6,20 +6,30 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <div class="loginMain">
+            <div class="box6">
+                <div class="headerleft">
+                    <img src="./img/teamshop.png" alt="TeamShop">
+                </div>
+            </div>
+            
         <h1>Login Page</h1>
         <p>${message}</p>
         <form action="checklogin" method="POST">
-              Username: <input type="text" name="username" /><br />
-              Password: <input type="password" name="password" /><br /> 
+              Username: <input type="text" name="username" /><br /><br/>
+              Password: <input type="password" name="password" /><br /> <br/>
               <input type="submit" value="Submit Login" />
-       </form>
+       </form><br/>
+        <a href="index.jsp">Back to store</a>
+        <br/>
+        <br/>
+        </div>
     </body>
 </html>

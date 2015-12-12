@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <%
 
-session.invalidate();
+    session.invalidate();
 
 %>
 <html>
@@ -18,15 +18,22 @@ session.invalidate();
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="main">
-            <h1>Thank you for your payment!</h1>
-            <p>We appreciate your business and generous grades, click the following link to return to the home page: </p>
-            <div class="center">
+        <div class="loginMain">
+                <div class="box5">
+                    <div class="headerleft">
+                        <img src="./img/teamshop.png" alt="TeamShop">
+                    </div>
+                </div>
                 
-                
-                <a href="index.jsp">Home Page</a>
-            </div>
-            <br/>
+                    <h1>Thank you for your payment!</h1>
+                    <p>We appreciate your business and generous grades,</p>
+                    <p>click the following link to return to the home page: </p>
+                    <a href="index.jsp">Home Page</a>
+                    <br/>
+                    <br/>
+              
+                <br/>
+            
         </div>
     </body>
 </html>

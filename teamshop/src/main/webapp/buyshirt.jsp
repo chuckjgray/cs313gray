@@ -15,13 +15,19 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="main">
-
+        <div class="loginMain">
+            <div class="box6">
+                <div class="headerleft">
+                    <img src="./img/teamshop.png" alt="TeamShop">
+                </div>
+            </div>
+            <hr align="center" width="85%">
+           
             <h1>Buy Your Shirt Here</h1>
             <form action="homepage.jsp" method="POST">
                 <input type="submit" value="Continue Shopping">
             </form>
-
+            
             <br/>
             <%
                 Random r = new Random();
@@ -38,9 +44,12 @@
                 Your Total Price:  ${price}<br/>
                 <input type="hidden" value = "${price}" name ="price"><br/><br/>
                 <input type="hidden" name="description" value ="These are awesome shirts!">
+                
+                <hr align="center" width="85%">
                 <p>Note - You will be directed to the PayPal site for the transaction.</p>
-                <input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /><br/><br/>
+                <div class="button"><input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /></div><br/><br/>
             </form>
+            
         </div>
     </body>
 
