@@ -18,7 +18,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="loginMain">
+        <div class="thankyouMain">
                 <div class="box5">
                     <div class="headerleft">
                         <img src="./img/teamshop.png" alt="TeamShop">
