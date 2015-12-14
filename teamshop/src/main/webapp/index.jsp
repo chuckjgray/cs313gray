@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Home Page</title>
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -16,30 +17,25 @@
 
     <body>
         <div class="main">
+            <div class="header">
+                <div class="leftlogo">
 
-            <div id="wrap">
-                <div class="box2">
-                    <div class="headerleft">
-                        <img src="./img/teamshop.png" alt="TeamShop">
-                    </div>
+                    <a href="login.jsp"><img src="./img/teamshop2.png" alt="TeamShop"></a>
+
                 </div>
-                <div class="box3">
-                    <div class="headermiddle">
-                        <a href="login.jsp"><img src="./img/login.png" alt="login"/></a>
-                    </div>
+                <div class="rightlogo">
+
+                    <a href="login.jsp"><img src="./img/login.png" alt="login"/></a>
+
                 </div>
-                <div class="box3">
-                    <div class="headerright">
-                        <a href="cart.jsp"><img src="./img/teamshopcart.png" alt="TeamShopCart"/></a>
-                            <%= session.getAttribute("theName")%>
-                        <h2>${$param.username}</h2>
-                    </div>
-                </div>
-                <hr align="center" width="85%">
+            </div>
+            <div class="wrap">
+
+
                 <div class="box">
                     <div class="innerContent">
                         <figure>
-                            <a href="buyshirt.jsp"><img src="./img/btccheatblue.png" alt="Big Time Coach Blue Shirts"/></a>
+                            <a href="dontcheatBLUE.jsp"><img src="./img/btccheatblue.png" alt="Big Time Coach Blue Shirts"/></a>
                             <figcaption>DON'T CHEAT THE DRILL</figcaption>
                         </figure>
                         <div class="form">
@@ -54,7 +50,7 @@
                 <div class="box">
                     <div class="innerContent">
                         <figure>
-                            <img src="./img/btccheatgrey.png" alt="Big Time Coach Gray Shirts"/>
+                            <a href="dontcheatGrey.jsp"><img src="./img/btccheatgrey.png" alt="Big Time Coach Gray Shirts"/></a>
                             <figcaption>DON'T CHEAT THE DRILL</figcaption>
                         </figure>
                         <div class="form">
@@ -69,7 +65,7 @@
                 <div class="box">
                     <div class="innerContent">
                         <figure>
-                            <img src="./img/btccheatltgrey.png" alt="Big Time Coach Light Gray Shirts"/>
+                            <a href="dontcheatLTGREY.jsp"><img src="./img/btccheatltgrey.png" alt="Big Time Coach Light Gray Shirts"/></a>
                             <figcaption>DON'T CHEAT THE DRILL</figcaption>
                         </figure>
                         <div class="form">
@@ -81,11 +77,11 @@
                         </div>
                     </div>
                 </div>
-                <hr align="center" width="85%">
+
                 <div class="box">
                     <div class="innerContent">
                         <figure>
-                            <img src="./img/btciceredblack.png" alt="Big Time Coach Black Shirts"/>
+                            <a href="wegoticeRED.jsp"><img src="./img/btciceredblack.png" alt="Big Time Coach Black Shirts"/></a>
                             <figcaption>WE'VE GOT ICE FOR THAT</figcaption>
                         </figure>
                         <div class="form">
@@ -100,7 +96,7 @@
                 <div class="box">
                     <div class="innerContent">
                         <figure>
-                            <img src="./img/btciceyellow.png" alt="Big Time Coach Yellow Shirts"/>
+                            <a href="wegoticeYELLOW.jsp"><img src="./img/btciceyellow.png" alt="Big Time Coach Yellow Shirts"/></a>
                             <figcaption>WE'VE GOT ICE FOR THAT</figcaption>
                         </figure>
                         <div class="form">
@@ -115,7 +111,7 @@
                 <div class="box">
                     <div class="innerContent">
                         <figure>
-                            <img src="./img/btcicegrey.png" alt="Big Time Coach Grey Shirts"/>
+                            <a href="wegoticeGREY.jsp"><img src="./img/btcicegrey.png" alt="Big Time Coach Grey Shirts"/></a>
                             <figcaption>WE'VE GOT ICE FOR THAT</figcaption>
                         </figure>
                         <div class="form">
@@ -127,28 +123,30 @@
                         </div>
                     </div>
                 </div>
-                <hr align="center" width="85%">
-                <div class="form">
-                    <form method=POST action=cart.jsp>
-                        <br>
-                        Please enter item to add or remove to the cart:
-                        <br>
-                        <select NAME="item">
-                            <option>Don't Cheat the Drill (Blue)
-                            <option>Don't Cheat the Drill (Grey)
-                            <option>Don't Cheat the Drill (Lt Grey)
-                            <option>We've Got Ice For That (Black)
-                            <option>We've Got Ice For That (Yellow)
-                            <option>We've Got Ice For That (Grey)
-                        </select>
-                        <br> <br>
-                        <input type=submit name="submit" value="add to cart">
-                        <input type=submit name="submit" value="remove from cart">
-                    </form>
-                </div>
-                <hr align="center" width="85%">
-                <p>TeamShop Copyright 2015</p>
             </div>
+            <div class="linespace"></div>
+            <div class="form2">
+                <form method=POST action=cart.jsp>
+
+                    Please enter item to add or remove to the cart:
+                    <br>
+                    <select NAME="item">
+                        <option>Don't Cheat the Drill (Blue)
+                        <option>Don't Cheat the Drill (Grey)
+                        <option>Don't Cheat the Drill (Lt Grey)
+                        <option>We've Got Ice For That (Black)
+                        <option>We've Got Ice For That (Yellow)
+                        <option>We've Got Ice For That (Grey)
+                    </select>
+                    <br> <br>
+                    <input type=submit name="submit" value="add to cart">
+                    <input type=submit name="submit" value="remove from cart">
+                </form>
+            </div>
+            <hr align="center" width="85%">
+            <p>TeamShop Copyright 2015</p> 
+
+
         </div>
     </body>
 </html>

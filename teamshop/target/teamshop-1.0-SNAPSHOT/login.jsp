@@ -13,16 +13,18 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="loginMain">
+        <div class="thankyouMain">
             <div class="box6">
                 <div class="headerleft">
-                    <img src="./img/teamshop.png" alt="TeamShop">
+                    <img src="./img/teamshop2.png" alt="TeamShop">
                 </div>
             </div>
             
         <h1>Login Page</h1>
         <p>${message}</p>
         <form action="checklogin" method="POST">
+            <br/>
+            <br/>
               Username: <input type="text" name="username" /><br /><br/>
               Password: <input type="password" name="password" /><br /> <br/>
               <input type="submit" value="Submit Login" />

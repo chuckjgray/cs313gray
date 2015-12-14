@@ -14,9 +14,15 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="main">
+        <div class="thankyouMain">
+            <div class="box5">
+                    <div class="headerleft">
+                        <img src="./img/teamshop2.png" alt="TeamShop">
+                    </div>
+                </div>
             <h1>Confirmation</h1>
-            <p>You are about to make the payment, there is no turning back after you press that button!</p>
+            <p>You are about to make the payment, </p>
+            <p>there is no turning back after you press that button!</p>
                 <form action="Confirmation" method="POST">
                       <input type="hidden" value="${param.userId}" name="userId">
                       <input type="hidden" value="${param.itemId}" name="itemId">

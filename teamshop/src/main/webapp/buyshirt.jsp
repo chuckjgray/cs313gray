@@ -15,16 +15,16 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="loginMain">
-            <div class="box6">
+        <div class="thankyouMain">
+            <div class="box5">
                 <div class="headerleft">
-                    <img src="./img/teamshop.png" alt="TeamShop">
+                    <img src="./img/teamshop2.png" alt="TeamShop">
                 </div>
             </div>
-            <hr align="center" width="85%">
+           
            
             <h1>Buy Your Shirt Here</h1>
-            <form action="homepage.jsp" method="POST">
+            <form action="index.jsp" method="POST">
                 <input type="submit" value="Continue Shopping">
             </form>
             

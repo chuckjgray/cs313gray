@@ -8,25 +8,71 @@ and open the template in the editor.
     Author     : Chuck
 */
 
+
 html{
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
     background-color: #827d7d;
-    
+
 }
 
 body h1{
-    
-   
+
+
 }
 .main{
     background-color:#fff;
     border: solid thin #2a3542;
     width:66%;
-    margin:0% 19% 0%;
     border-radius: 4%;
+    margin-left: auto;
+    margin-right:auto;
     clear:both;
     border-radius: 15px 15px;
     padding: 0 2%;
 }
+
+.wrap {
+    overflow: hidden;
+    margin: 10px;
+    clear:both;
+}
+.teamshoplogo{
+    width:48%;
+    margin-left: auto;
+    margin-right:auto;
+    float:left;
+    position:absolute;
+}
+.teamshoplogin{
+    width:48%;
+    margin-left: auto;
+    margin-right:auto;
+    float:left;
+    position:absolute;
+}
+.header{
+    width:100%;
+    height:5%;
+    float:left;
+    text-align:center;
+}
+.leftlogo{  
+    height:10%;
+    width:50%;
+    float:left;
+    padding-top: 40px;
+}
+.rightlogo{
+    height:10%;
+    width:50%;
+    float:left;
+    padding-top: 40px;
+}
+
+
 .cartMain{
     background-color:#fff;
     border: solid thin #2a3542;
@@ -55,12 +101,18 @@ body h1{
     margin:auto;
     border-radius: 4%;
     clear:both;
-    border-radius: 15px 15px;
+    border-radius: 15px 15px 15px 15px;
     text-align: center;
 }
 
 .main p{
     text-align:center;
+}
+
+.linespace{
+    margin-top:30px;
+    clear:both;
+    position:relative;
 }
 
 .center{
@@ -124,6 +176,8 @@ figure img{
     padding-bottom: 25%;
     color: #000000;
     position: relative;
+    margin-top:20px;
+    margin-bottom:40px;
     float: left;
 }
 .box2{
@@ -154,7 +208,7 @@ figure img{
     color: #000000;
     position: relative;
     float: left;
-    clrar:both;
+    clear:both;
 }
 .box6{
     width: 100%;
@@ -162,7 +216,7 @@ figure img{
     color: #000000;
     position: relative;
     float: left;
-    clrar:both;
+    clear:both;
 }
 
 .innerContent {
@@ -175,11 +229,7 @@ figure img{
     padding: 10px;
 }
 
-header {
-    height: 100px;
-    padding: 0px 0px 20px 0px;
-    left: 1px;
-}
+
 figure{
     text-align: center;
     max-width: 100%;
@@ -198,6 +248,11 @@ form{
     max-width: 100%;
 
 }
+.form2{
+    text-align: center;
+    max-width: 100%;
+
+}
 .headerleft{
     position: absolute;
     left: 1px;
@@ -206,7 +261,11 @@ form{
     bottom: 1px;
     background: #fff;
     padding: 10px;
+    margin-right:auto;
+    margin-left:auto;
 }
+
+
 .headermiddle{
     position: absolute;
     left: 1px;
@@ -215,6 +274,8 @@ form{
     bottom: 1px;
     background: #fff;
     padding: 10px;
+    margin-right:auto;
+    margin-left:auto;
 
 }
 
@@ -226,6 +287,8 @@ form{
     bottom: 1px;
     background: #fff;
     padding: 10px;
+    margin-right:auto;
+    margin-left:auto;
 
 }
 
@@ -240,4 +303,219 @@ form{
     bottom: 1px;
     background: #fff;
     padding: 10px;
+}
+.liststyle{
+    list-style: none;
+}
+
+/********** Media Queries **************/
+
+@media only screen and (max-width : 480px) {
+    /* Smartphone view: 1 tile */
+    .main{
+        width:96%;
+    }
+
+    .box {
+        width: 100%;
+        padding-bottom: 100%;
+        margin-bottom: 10px;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        display: box;
+        clear: both;
+        text-align: center;
+    }
+    .box2{
+        max-width: 100%;
+        padding-bottom: 15%;
+        color: #000000;
+        position: relative;
+        float: left;
+        clear: both;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        text-align: center;
+    }
+    .box5{
+        margin-bottom: 20px;
+    }
+
+    .innerContent{
+        max-width:100%;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        display: box;
+    }
+    .box3{
+        max-width: 100%;
+        padding-bottom: 15%;
+        color: #000000;
+        position: relative;
+        float: left;
+        clear: both;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        text-align: center;
+    }
+    .form{
+        width:100%;
+        text-align: center;
+        margin: 10px 0px 10px 0px;
+        clear: both;
+    }
+    form2{
+        width:100%;
+        margin-top: 100px;
+    }
+    .wrap{
+        margin-bottom: 100px;
+        clear:both;
+    }
+    .linespace{
+        height:50px;
+        background-color: #fff;
+    }
+    .leftlogo{  
+        height:10%;
+        width:100%;
+        float:left;
+        padding-top: 40px;
+        margin-right: auto;
+        margin-left:auto;
+    }
+    .rightlogo{
+        height:10%;
+        width:100%;
+        float:left;
+        padding-top: 40px;
+        margin-right: auto;
+        margin-left:auto;
+    }
+    .thankyouMain{
+        width:96%;
+    }
+
+}
+
+@media only screen and (max-width : 680px) and (min-width : 481px) {
+    /* Tablet view: 2 tiles */
+    main{
+        width: 96%;
+    }
+
+    .box {
+        width: 96%;
+        padding-bottom: 55%;
+    }
+    .form{
+        margin-top:5px;
+    }
+    .form2{
+        margin-top:40px;
+    }
+    .leftlogo{  
+        height:10%;
+        width:100%;
+        float:left;
+        padding-top: 40px;
+        margin-right: auto;
+        margin-left:auto;
+    }
+    .rightlogo{
+        height:10%;
+        width:100%;
+        float:left;
+        padding-top: 40px;
+        margin-right: auto;
+        margin-left:auto;
+    }
+    .thankyouMain{
+        width:96%;
+    }
+    .loginMain{
+        width:96%;
+    }
+}
+
+@media only screen and (max-width : 850px) and (min-width : 681px) {
+    /* Small desktop / ipad view: 3 tiles */
+    main{
+        width:96%;
+    }
+
+    .box {
+        width: 50%;
+        padding-bottom: 50%;
+    }
+    .form{
+        margin-bottom:20px;
+    }
+    .form2{
+        margin-top:80px;
+    }
+    .thankyouMain{
+        width:80%;
+    }
+}
+
+
+@media only screen and (max-width : 1050px) and (min-width : 851px) {
+    /* Small desktop / ipad view: 3 tiles */
+    main{
+        width:80%;
+    }
+
+    .box {
+        width: 33.3%;
+        padding-bottom: 50%;
+    }
+
+    .box2{
+        width: 40%;
+        padding-bottom: 30%;
+        color: #000000;
+        position: relative;
+        float: left;
+    }
+    .box3{
+        width: 30%;
+        padding-bottom: 30%;
+        color: #000000;
+        position: relative;
+        float: left;
+    }
+    .form{
+        margin-bottom:0px;
+    }
+    .form2{
+        margin-top:80px;
+    }
+       .thankyouMain{
+        width:70%;
+    }
+}
+
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+    /* Medium desktop: 4 tiles */
+    .main{
+        width: 80%;
+    }
+    .box {
+        width: 25%;
+        padding-bottom: 35%;
+        margin-bottom: 20px;
+    }
+    .form2{
+        margin-top:30px;
+    }
 }

@@ -21,7 +21,7 @@
         <div class="thankyouMain">
                 <div class="box5">
                     <div class="headerleft">
-                        <img src="./img/teamshop.png" alt="TeamShop">
+                        <img src="./img/teamshop2.png" alt="TeamShop">
                     </div>
                 </div>
                 

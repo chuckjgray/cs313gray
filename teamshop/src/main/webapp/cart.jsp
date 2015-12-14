@@ -4,6 +4,7 @@
     Author     : Dave
 --%>
 <%@page import="cart.addRemove" %>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -11,40 +12,51 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head> 
     <body>
-        <div class="cartMain">
-             <div class="box5">
+        <div class="thankyouMain">
+            <div class="box5">
                 <div class="headerleft">
-                    <img src="./img/teamshop.png" alt="TeamShop">
+                    <img src="./img/teamshop2.png" alt="TeamShop">
                 </div>
             </div>
             <div class="box5">
                 <div class="headerleft">
-                    <img src="./img/teamshopcart.png" alt="TeamShop">
+                    <img src="./img/teamshopcart2.png" alt="TeamShop">
                 </div>
             </div>
-<jsp:useBean id="cart" scope="session" class="cart.addRemove" />
+            <jsp:useBean id="cart" scope="session" class="cart.addRemove" />
 
-<jsp:setProperty name="cart" property="*" />
+            <jsp:setProperty name="cart" property="*" />
 
-<%cart.processRequest(request);%>
+            <%cart.processRequest(request);%>
 
-<br> Items in cart:
-<ol>
-<% 
-	String[] products = cart.getProducts();
-	for (int i=0; i<products.length; i++) {
-         out.print( (i+1)+". " + (products[i])+ "<br/>"); 
-         //out.print("<li>" + (products[i])); 
-	}
-%>
-</ol>
+            <br> 
+            <p>Items in cart:</p>
+            <ol class="liststyle">
+                <%
+                    int price = 0;
+                    String[] products = cart.getProducts();
+                    for (int i = 0; i < products.length; i++) {
+                        price += 2;
+                %>
+                <li> <% out.print((products[i])); %> 
 
-<br> 
-<input type="button" onclick="location.href='buyshirt.jsp';" value="Go To CHECKOUT"/>
+                    <%
+                        }
+                    %>
+            </ol>
 
-<br>
+            <% out.print(("Your total is " + price));%>
+            <form name="submitform" action="passData" method="POST" id="1">
 
-<br> <a href="index.jsp">continue shopping</a></br></br>
+                <%
+                    String queryString = "passData?price=" + price;
+
+                %>
+
+                <a href="<%= queryString%>">Checkout</a>
+
+            </form>
+            <br> <a href="index.jsp">Continue Shopping</a></br></br>
         </div>
     </body>
 </html>

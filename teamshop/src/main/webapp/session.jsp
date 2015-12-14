@@ -22,13 +22,16 @@
     </head>
 
     <body>
-        <div class="loginMain">
+        <div class="thankyouMain">
         <div class="box6">
                 <div class="headerleft">
-                    <img src="./img/teamshop.png" alt="TeamShop">
+                    <img src="./img/teamshop2.png" alt="TeamShop">
                 </div>
             </div>
+           
             <h1>Confirmed Login</h1>
+            <br/>
+            <br/>
             <p>${$param.username} You are logged in. Click <a href="index.jsp">here</a> to continue.</p>
 
             </br> </br>
